@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: greet
         id: hello
-        uses: jamesonhill/docker-action@v1
+        uses: jamesonhill/docker-action@v3
         with:
           who-to-greet: 'Banana'
       - name: Get greet time
