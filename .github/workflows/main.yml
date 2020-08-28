@@ -1,0 +1,13 @@
+name: test docker action
+on: [push]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greet
+        id: hello
+        uses: jamesonhill/docker-action@v1
+        with:
+          who-to-greet: 'Banana'
+      - name: Get greet time
+        run: echo "The greeting time was ${{ steps.hello.outputs.time }}"
